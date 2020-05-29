@@ -1,0 +1,105 @@
+6.Solution
+
+def cubesum(num):
+	sum=0
+	for i in str(num):
+		i=int(i)
+		sum+=int(i*i*i)
+	return sum
+
+def isarmstrong(num):
+	return True if cubesum(num)== num else False
+def printarm(num):
+	return str(num)+'is armstrong' if isarmstrong(num) else 'Not Armstrong'
+
+#for i in range(1000):
+#	if isarmstrong(i):
+#		print(printarm(i))
+print(printarm(22))
+
+7.
+def proddigits(num):
+	prod=1
+	for i in str(num):
+		i=int(i)
+		prod*=i
+	return prod
+print(proddigits(345))
+
+12.
+l=list(filter(lambda x:x%2!=0, range(20)))
+print(l)
+
+
+13.
+l=list(map(lambda x:x*x*x, range(10)))
+print(l)
+
+14.
+l=list(map(lambda x:x*x*x, range(10)))
+s=list(filter(lambda x:x%2==0, l))
+print(s)
+
+10.
+def pernum(num):
+	sum=0
+	for i in range(1,num):
+		if num%i==0:
+			sum+=i
+	if sum==num:
+		return True
+for i in range(1,10000):
+	if pernum(i):
+		print(i,end=' ')
+
+11,
+def fun(n,n1):
+    sum,sum1=0,0
+
+    for i in range(1,n):
+	        if n%i==0:
+	            sum=sum+i
+    for i in range(1,n1):
+        if n1 % i == 0:
+            sum1 = sum1 + i
+    if n==sum1 and n1==sum:
+        return True
+
+for i in range(1,500):
+    for j in range(1,500):
+        if fun(i,j):
+           print(i,j)
+
+9.def sumpdiv(n):
+    sum=0
+    for i in range(1,n):
+        if n%i==0:
+            sum+=i
+    return sum
+print(sumpdiv(136))
+
+8.
+sdef proddigits(num):
+    prod=1
+    for i in str(num):
+        i=int(i)
+        prod*=i
+    return prod
+def mdr(num):
+    while (num>9):
+        print(num)
+        num=proddigits(num)
+    return num
+
+def mper(num):
+    c=0
+    while (num>9):
+        num=proddigits(num)
+        c+=1
+    return c
+
+print(mper(86))
+
+
+
+
